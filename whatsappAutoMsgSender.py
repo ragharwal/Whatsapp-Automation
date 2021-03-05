@@ -1,14 +1,14 @@
 from twilio.rest import Client
 
-account_sid = 'ACf7c5179e77b12874197d439accf03a8a'
-auth_token = '6f9ed3d7b5105209fd0d96b2ce003f9c'
+account_sid = '<account_sid>'
+auth_token = '<auth_token>'
 client = Client(account_sid, auth_token)
 
 def sendMsg():
     message = client.messages.create(
-                                  from_='whatsapp:+14155238886',
-                                  body='Hi Raghav, How are you doing?',
-                                  to='whatsapp:+918630689227'
+                                  from_='whatsapp:<sender>',
+                                  body='How are you doing?',
+                                  to='whatsapp:<receiver>'
                               )
 
     print(message.sid)
